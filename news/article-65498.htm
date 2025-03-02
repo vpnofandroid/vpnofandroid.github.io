@@ -1,0 +1,235 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnofandroid.github.io/news/article-65498.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>父组件调用子组件的方法-子组件向父组件传值</title>
+        <meta name="description" content="一：父组件调用子组件的方法  父组件  &lt;template&gt;     &lt;div&gt; 　　　　　父页面         &lt;son-com ref="sonRef"/&gt; " />
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="安卓VPN 订阅机场节点中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnofandroid.github.io/news/article-65498.htm" />
+    <meta property="og:site_name" content="安卓VPN 订阅机场节点中文网" />
+    <meta property="og:title" content="父组件调用子组件的方法-子组件向父组件传值" />
+    <meta property="og:image" content="https://vpnofandroid.github.io/uploads/20241103/8a4239d0434c9de008248582b7678b13.webp" />
+        <meta property="og:release_date" content="2025-03-01T07:00:29" />
+    <meta property="og:updated_time" content="2025-03-01T07:00:29" />
+        <meta property="og:description" content="一：父组件调用子组件的方法  父组件  &lt;template&gt;     &lt;div&gt; 　　　　　父页面         &lt;son-com ref="sonRef"/&gt; " />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="父组件调用子组件的方法-子组件向父组件传值">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- css here -->
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/meanmenu.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/scrolltop.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YLRBZ1KCHT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YLRBZ1KCHT');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- preloaders start -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- preloaders end -->
+    <!-- header area start -->
+    <header>
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="/">
+                                                                <span>安卓VPN</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <!-- main menu area start -->
+                    <div class="col-md-8">
+                        <div class="main-menu-area float-right">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <!-- main menu area end -->
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+    </header>
+    <!-- header area end -->
+    <!-- main area start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div id="apork-breadcrumb-area" class="apork-breadcrumb-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>父组件调用子组件的方法-子组件向父组件传值</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+        <!-- about area start -->
+        <div class="apork-about-area mt-230 mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h2> <a id="_0" rel="nofollow"></a>一：父组件调用子组件的方法</h2> <ul> <li>父组件</li> </ul> <pre><code class="prism language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>     <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span> 　　　　　父页面         <span class="token operator">&lt;</span>son<span class="token operator">-</span>com ref<span class="token operator">=</span><span class="token string">"sonRef"</span><span class="token operator">/</span><span class="token operator">&gt;</span>         <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"handleClick"</span><span class="token operator">&gt;</span>test<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>     <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span> <span class="token keyword">import</span> <span class="token punctuation">{<!-- --></span>defineComponent<span class="token punctuation">,</span>ref<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>     <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span> 　　　　<span class="token keyword">const</span> sonRef <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     　 <span class="token keyword">const</span> <span class="token function-variable function">handleClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{<!-- --></span>        　　sonRef<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">song</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     　 <span class="token punctuation">}</span> 　　<span class="token keyword">return</span> <span class="token punctuation">{<!-- --></span> sonRef<span class="token punctuation">,</span> handleClick<span class="token punctuation">,</span> <span class="token punctuation">}</span>  　　<span class="token punctuation">}</span>  <span class="token punctuation">}</span><span class="token punctuation">)</span>  <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span> </code></pre> <ul> <li>子组件</li> </ul> <pre><code class="prism language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span> 　　 <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>         子页面     <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>  <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span> <span class="token keyword">import</span> <span class="token punctuation">{<!-- --></span>   defineComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>     <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span> 　　　　<span class="token keyword">const</span> <span class="token function-variable function">song</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'whos your daddy'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 　　　　<span class="token keyword">return</span> <span class="token punctuation">{<!-- --></span>  　　　　　　song 　　　　<span class="token punctuation">}</span>  　　<span class="token punctuation">}</span>  <span class="token punctuation">}</span><span class="token punctuation">)</span>  <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span> </code></pre> <ul> <li>如果是TS呢</li> </ul> <pre><code class="prism language-javascript">如果是<span class="token constant">TS</span>定义可以使用 <span class="token keyword">const</span> sonRef <span class="token operator">=</span> ref<span class="token operator">&lt;</span><span class="token keyword">null</span> <span class="token operator">|</span> HTMLElement<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> </code></pre> <h2> <a id="_54" rel="nofollow"></a>二：子传父</h2> <blockquote> <p>上面我们在父组件里面去调用了子组件的方法，那么执行完了是不是要刷新或者修改父组件里面的某些值呢</p> </blockquote> <p><strong>vue3中子组件向父组件传值分以下几步</strong></p> <p>1、定义emits,emits的定义是与component、setup等这些属性是同级。例如<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221230/b95e7beb540515541afa9d5430654060.jpg" alt=" 父组件调用子组件的方法-子组件向父组件传值"></p> <pre><code class="prism language-javascript">props<span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>       isUpdate<span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>         type<span class="token operator">:</span> Boolean<span class="token punctuation">,</span>         <span class="token keyword">default</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>       <span class="token punctuation">}</span><span class="token punctuation">,</span>       isRadio<span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>         type<span class="token operator">:</span> <span class="token punctuation">[</span>Number<span class="token punctuation">,</span> String<span class="token punctuation">]</span><span class="token punctuation">,</span>         <span class="token keyword">default</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>       <span class="token punctuation">}</span><span class="token punctuation">,</span>       id<span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>         type<span class="token operator">:</span> <span class="token punctuation">[</span>Number<span class="token punctuation">,</span> String<span class="token punctuation">]</span><span class="token punctuation">,</span>       <span class="token punctuation">}</span><span class="token punctuation">,</span>     <span class="token punctuation">}</span><span class="token punctuation">,</span>     emits<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'callCancel'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>     <span class="token function">setup</span><span class="token punctuation">(</span><span class="token parameter">props<span class="token punctuation">,</span> ctx</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>       <span class="token keyword">const</span> formState <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>         virtual_sales_sum<span class="token operator">:</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span>         virtual_collect_sum<span class="token operator">:</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span>         is_recommend<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>         is_new<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>         is_hot<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>       <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> </code></pre> <p>emits此时是作为数组，它也可以接收一个对象</p> <p>2、方法中使用<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221230/0ac43562da8f662eb0b205554035fec6.jpg" alt=" 父组件调用子组件的方法-子组件向父组件传值"></p> <pre><code class="prism language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">handleSubmit</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{<!-- --></span>         <span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token punctuation">;</span>         <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">editGoodsMarketingAttr</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span><span class="token punctuation">;</span>         ctx<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'callCancel'</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token punctuation">}</span><span class="token punctuation">;</span>  这里如果没用到setup语法糖，记得<span class="token keyword">return</span>出去 </code></pre> <p><strong>与Vue2的用法不同的是，现在需使用ctx.emit，其中ctx是setup中第二个参数，也就是上下文对象</strong></p> <p>3、在父组件上定义同名方法接收<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221230/f324a8108582d8fcb753834768ce19ba.jpg" alt=" 父组件调用子组件的方法-子组件向父组件传值"><br /> 4、父组件接收方法的参数为子组件传递的参数<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221230/f0a7dc37734f762bb42df9536802d70a.jpg" alt=" 父组件调用子组件的方法-子组件向父组件传值"></p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-64882.htm">宠物疫苗放冰箱保质期多久（宠物疫苗能放多久）</a></p>
+                                        <p>下一个：<a href="/news/article-65499.htm">Web前端：JavaScript和Nodejs有什么不同?</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-63056.htm" title="python协程编程实例_Python异步IO编程之-asyncio协程应用例子">python协程编程实例_Python异步IO编程之-asyncio协程应用例子</a></li>
+                        <li class="py-2"><a href="/news/article-61286.htm" title="宠物店领养协议书怎么写 宠物店领养协议书怎么写的">宠物店领养协议书怎么写 宠物店领养协议书怎么写的</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-21-free-node-subscribe.htm" title="安卓VPN | 2月21日22.4M/S|免费V2ray/Clash/SSR/Shadowrocket免费节点订阅分享">安卓VPN | 2月21日22.4M/S|免费V2ray/Clash/SSR/Shadowrocket免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-63646.htm" title="Linux中磁盘分区清理方法">Linux中磁盘分区清理方法</a></li>
+                        <li class="py-2"><a href="/news/article-61859.htm" title="领养宠物赚收益的软件有哪些（领养宠物渠道）">领养宠物赚收益的软件有哪些（领养宠物渠道）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-22-clash-v2ray-ss-ssr.htm" title="安卓VPN | 2月22日18M/S|免费Clash/SSR/V2ray/Shadowrocket免费节点订阅分享">安卓VPN | 2月22日18M/S|免费Clash/SSR/V2ray/Shadowrocket免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-66110.htm" title="新手养猫要注意些什么（新手养猫十大误区）">新手养猫要注意些什么（新手养猫十大误区）</a></li>
+                        <li class="py-2"><a href="/news/article-64267.htm" title="Pygame从0实战10(泡泡小游戏添加音效)">Pygame从0实战10(泡泡小游戏添加音效)</a></li>
+                        <li class="py-2"><a href="/news/article-61858.htm" title="前端性能优化">前端性能优化</a></li>
+                        <li class="py-2"><a href="/news/article-62463.htm" title="数据库基础知识详解四：存储过程、视图、游标、SQL语句优化以及索引">数据库基础知识详解四：存储过程、视图、游标、SQL语句优化以及索引</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">22</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+                <!-- footer area start -->
+        <footer id="apork-footer-area" class="apork-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer-copyright text-center py-5">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">安卓VPN 订阅机场节点中文网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        <!-- scrolltop button -->
+        <div class="material-scrolltop"></div>
+        <!-- js here -->
+        <script src="/assets/website/js/frontend/vergegithub/modernizr-3.5.0.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/jquery-1.12.4.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/counterup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/scrolltop.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/plugins.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- main area end -->
+</body>
+
+</html>
