@@ -1,0 +1,235 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnofandroid.github.io/news/article-80709.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>vue extend+promise封装全局弹窗组件_vue.js_</title>
+        <meta name="description" content="本文实例为大家分享了vue + element ui实现锚点定位的具体代码，供大家参考，具体内容如下 因为项目没有引入第三方UI库，所以所有的公共组件都需要自己封装现在需要一个全局的弹窗，要有prom" />
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="安卓VPN 订阅机场节点中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnofandroid.github.io/news/article-80709.htm" />
+    <meta property="og:site_name" content="安卓VPN 订阅机场节点中文网" />
+    <meta property="og:title" content="vue extend+promise封装全局弹窗组件_vue.js_" />
+    <meta property="og:image" content="https://vpnofandroid.github.io/uploads/20241103/c293fc8c31c6c5660136076a0af47940.webp" />
+        <meta property="og:release_date" content="2025-03-24T08:22:50" />
+    <meta property="og:updated_time" content="2025-03-24T08:22:50" />
+        <meta property="og:description" content="本文实例为大家分享了vue + element ui实现锚点定位的具体代码，供大家参考，具体内容如下 因为项目没有引入第三方UI库，所以所有的公共组件都需要自己封装现在需要一个全局的弹窗，要有prom" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="vue extend+promise封装全局弹窗组件_vue.js_">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- css here -->
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/meanmenu.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/scrolltop.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YLRBZ1KCHT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YLRBZ1KCHT');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- preloaders start -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- preloaders end -->
+    <!-- header area start -->
+    <header>
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="/">
+                                                                <span>安卓VPN</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <!-- main menu area start -->
+                    <div class="col-md-8">
+                        <div class="main-menu-area float-right">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <!-- main menu area end -->
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+    </header>
+    <!-- header area end -->
+    <!-- main area start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div id="apork-breadcrumb-area" class="apork-breadcrumb-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>vue extend+promise封装全局弹窗组件_vue.js_</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+        <!-- about area start -->
+        <div class="apork-about-area mt-230 mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<p>本文实例为大家分享了vue + element ui实现锚点定位的具体代码，供大家参考，具体内容如下</p> <p>因为项目没有引入第三方UI库，所以所有的公共组件都需要自己封装<br />现在需要一个全局的弹窗，要有promise异步处理</p> <p>实现后的效果</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220413/38eb8aaf84c9d2a0d0efb9564c362b0a.jpg"></p> <div class="ay1code"> <pre class="brush:xhtml;">// components/confirm文件  &lt;template&gt;    &lt;div class="popup-wrap" v-if="showPopup"&gt;      &lt;div class="popup-center"&gt;        &lt;div class="popup-content"&gt;          &lt;div class="popup-close" @click="close"&gt;&lt;/div&gt;          &lt;div class="title"&gt;{{ title }}&lt;/div&gt;          &lt;div class="describe"&gt;{{ content }}&lt;/div&gt;          &lt;div class="btn"&gt;            &lt;div :class="['btn-right', active == 'cancal' ? 'active' : '']" @click="handleClick('cancal')"&gt;{{cancelBtnText}}&lt;/div&gt;            &lt;div :class="['btn-right', active == 'yes' ? 'active' : '']" @click="handleClick('yes')"&gt;{{yesBtnText}}&lt;/div&gt;          &lt;/div&gt;        &lt;/div&gt;      &lt;/div&gt;    &lt;/div&gt;  &lt;/template&gt;    &lt;script&gt;  export default {    data() {      return {        showPopup: false,        title: "", //标题        content: "", //提示文字        yesBtnText: "", //确定按钮        cancelBtnText: "", //取消按钮        promiseStatus: null,        active: "",      };    },    watch: {},    props: {},    mounted () {      this.confirm()    },    methods: {      confirm() {        this.showPopup = true;        return new Promise((resolve, reject) =&gt; {          this.promiseStatus = { resolve, reject };        });      },      handleClick(e) {        this.active = e;        if (e == "yes") {          this.promiseStatus &amp;&amp; this.promiseStatus.resolve();        } else {          this.promiseStatus &amp;&amp; this.promiseStatus.reject();        }        this.showPopup = false      },      close() {        this.showPopup = false         this.promiseStatus &amp;&amp; this.promiseStatus.reject();        // this.$emit("close");      },    },  };  &lt;/script&gt;  &lt;style lang="less" scoped&gt;  .popup-wrap {    width: 100%;    height: 100%;    background-color: rgba(0, 0, 0, 0.6);    position: fixed;    top: 0rem;    left: 0rem;    right: 0rem;    bottom: 0rem;    z-index: 9999;    display: flex;    align-items: center;    justify-content: center;    .popup-center {      width: 990px;      height: 413px;      background-size: 990px 413px;      display: flex;      align-items: center;      justify-content: center;      .popup-content {        position: absolute;        width: 970px;        height: 393px;        background: linear-gradient(          180deg,          rgba(5, 20, 39, 0.9) 0%,          rgba(3, 17, 33, 0.9) 54%,          rgba(1, 33, 74, 0.9) 100%        );        .popup-close {          cursor: pointer;          position: relative;          top: 45px;          left: 900px;          width: 26px;          height: 26px;          border: 1px solid #fff;          background-size: 100% 100%;        }        .title {          text-align: center;          margin-top: 50px;          font-size: 40px;          font-family: PingFangSC-Semibold, PingFang SC;          font-weight: 600;          color: #258df9;          line-height: 56px;          background: linear-gradient(180deg, #afebff 0%, #ffffff 100%);          -webkit-background-clip: text;          -webkit-text-fill-color: transparent;        }        .describe {          text-align: center;          margin-top: 30px;          font-size: 28px;          font-family: PingFangSC-Regular, PingFang SC;          font-weight: 400;          color: #a4bace;          line-height: 40px;        }      }    }    .btn {      width: 540px;      height: 76px;      margin: 0 auto;      margin-top: 45px;      display: flex;      align-items: center;      justify-content: space-between;      .btn-right {        cursor: pointer;        width: 200px;        height: 76px;        border: 2px solid #a4bace;        font-size: 30px;        font-family: PingFangSC-Regular, PingFang SC;        font-weight: 400;        color: #a4bace;        line-height: 76px;        text-align: center;        &amp;.active {          border: 2px solid #258df9;          background: rgba(37, 141, 249, 0.3);          color: #afebff;        }      }    }  }  &lt;/style&gt;</pre> </div> <div class="ay1code"> <pre class="brush:js;">// js文件，这个文件看你们自己吧，写在哪里都可以  // utils/confirm.js  import Confirm from '@/components/confirm.vue'  import Vue from "vue";  const ConfirmBox = Vue.extend(Confirm);  /* @使用方法 this.$confirm进行调用   * this.$confirm("此操作将永久删除该文件, 是否继续？", "确定执行删除操作吗", {        cancelBtnText: "取消",        yesBtnText: "确认执行",      })      .then(() =&gt; {        console.log("点击了确认按钮");      })      .catch(() =&gt; {        console.log("点击了取消按钮cancel");      });   */    Confirm.install = (content, title, options) =&gt; {      if (typeof title === 'object') {        options = title;        title = '';      } else if (title === undefined) {        title = '';      }          options = Object.assign({        title: title,        content: content,      }, options);          let instance = new ConfirmBox({        data: options      }).$mount();      document.body.appendChild(instance.$el);      return instance.confirm();    };</pre> </div> <div class="ay1code"> <pre class="brush:js;">// mine.js 在根路径进行挂载  import "@/util/confirm" // 引入js  import Confirm from '@/components/confirm'  //Confirm组件  Vue.config.productionTip = false //阻止启动生产消息，常用作指令  消息提示的环境配置，设置为开发环境或者生产环境  Vue.prototype.$confirm = Confirm.install; //Confirm组</pre> </div> <div class="ay1code"> <pre class="brush:xhtml;">// 使用   // home.vue  &lt;template&gt;      &lt;div @click="handleClick"&gt;点击&lt;/div&gt;  &lt;/template&gt;    &lt;script&gt;  export.default = {      data () {},      methdos: {          handleClick () {              this.$confirm("此操作将永久删除该文件, 是否继续？", "确定执行删除操作吗", {                  cancelBtnText: "取消",                  yesBtnText: "确认执行",                })                .then(() =&gt; {                  console.log("点击了确认按钮");                })                .catch(() =&gt; {                  console.log("点击了取消按钮cancel");                });          }      }  }  &lt;/script&gt;</pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-80038.htm">益宠康动物医院 益宠康动物医院怎么样</a></p>
+                                        <p>下一个：<a href="/news/article-80711.htm">宠物粮食在哪里进货便宜些（宠物粮食批发市场）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-62464.htm" title="宠物领养协议书模板电子版图片 宠物领养协议书模板电子版图片大全">宠物领养协议书模板电子版图片 宠物领养协议书模板电子版图片大全</a></li>
+                        <li class="py-2"><a href="/news/article-66745.htm" title="shiro550反序列学习">shiro550反序列学习</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-13-clash-v2ray-ss-ssr.htm" title="安卓VPN | 3月13日21.1M/S|免费V2ray/Clash/SSR/Shadowrocket免费节点订阅分享">安卓VPN | 3月13日21.1M/S|免费V2ray/Clash/SSR/Shadowrocket免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-23-free-subscribe-node.htm" title="安卓VPN | 2月23日22.5M/S|免费SSR/Clash/Shadowrocket/V2ray免费节点订阅分享">安卓VPN | 2月23日22.5M/S|免费SSR/Clash/Shadowrocket/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-76616.htm" title="老人说猫不能捡为什么（流浪猫来预示着家里要死人了）">老人说猫不能捡为什么（流浪猫来预示着家里要死人了）</a></li>
+                        <li class="py-2"><a href="/news/article-71915.htm" title="动物医院申请书范文怎么写（动物医院营业执照申领需要哪些准备材料）">动物医院申请书范文怎么写（动物医院营业执照申领需要哪些准备材料）</a></li>
+                        <li class="py-2"><a href="/news/article-75937.htm" title="动物接种疫苗多少次可以免疫新冠（动物接种疫苗后多久产生抗体?）">动物接种疫苗多少次可以免疫新冠（动物接种疫苗后多久产生抗体?）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-21-clash-v2ray-ss-ssr.htm" title="安卓VPN | 3月21日19M/S|免费Shadowrocket/V2ray/SSR/Clash免费节点订阅分享">安卓VPN | 3月21日19M/S|免费Shadowrocket/V2ray/SSR/Clash免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-66110.htm" title="新手养猫要注意些什么（新手养猫十大误区）">新手养猫要注意些什么（新手养猫十大误区）</a></li>
+                        <li class="py-2"><a href="/news/article-61286.htm" title="宠物店领养协议书怎么写 宠物店领养协议书怎么写的">宠物店领养协议书怎么写 宠物店领养协议书怎么写的</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">72</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">22</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+                <!-- footer area start -->
+        <footer id="apork-footer-area" class="apork-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer-copyright text-center py-5">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">安卓VPN 订阅机场节点中文网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        <!-- scrolltop button -->
+        <div class="material-scrolltop"></div>
+        <!-- js here -->
+        <script src="/assets/website/js/frontend/vergegithub/modernizr-3.5.0.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/jquery-1.12.4.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/counterup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/scrolltop.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/plugins.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- main area end -->
+</body>
+
+</html>
