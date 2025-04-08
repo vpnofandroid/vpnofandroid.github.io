@@ -1,0 +1,237 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnofandroid.github.io/news/article-90054.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Pandas之数据读取与储存</title>
+        <meta name="description" content="使用Pandas做数据分析时，首先要读取数据。Pandas常用的读取文件有：  pd.read_csv() 用于读取csv格式文件 pd.read_excel() 用于读取xls和xlsx格式文件 p" />
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="安卓VPN 订阅机场节点中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnofandroid.github.io/news/article-90054.htm" />
+    <meta property="og:site_name" content="安卓VPN 订阅机场节点中文网" />
+    <meta property="og:title" content="Pandas之数据读取与储存" />
+    <meta property="og:image" content="https://vpnofandroid.github.io/uploads/20241103/a4d0fa31f9dfabb7360794a12f994feb.webp" />
+        <meta property="og:release_date" content="2025-04-06T10:11:04" />
+    <meta property="og:updated_time" content="2025-04-06T10:11:04" />
+        <meta property="og:description" content="使用Pandas做数据分析时，首先要读取数据。Pandas常用的读取文件有：  pd.read_csv() 用于读取csv格式文件 pd.read_excel() 用于读取xls和xlsx格式文件 p" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Pandas之数据读取与储存">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- css here -->
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/meanmenu.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/scrolltop.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YLRBZ1KCHT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YLRBZ1KCHT');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- preloaders start -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- preloaders end -->
+    <!-- header area start -->
+    <header>
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="/">
+                                                                <span>安卓VPN</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <!-- main menu area start -->
+                    <div class="col-md-8">
+                        <div class="main-menu-area float-right">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <!-- main menu area end -->
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+    </header>
+    <!-- header area end -->
+    <!-- main area start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div id="apork-breadcrumb-area" class="apork-breadcrumb-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Pandas之数据读取与储存</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+        <!-- about area start -->
+        <div class="apork-about-area mt-230 mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> </h1> <p>使用Pandas做数据分析时，首先要读取数据。Pandas常用的读取文件有：</p> <ul> <li><span style="color:#fe2c24;">pd.read_csv() 用于读取csv格式文件</span></li> <li><span style="color:#fe2c24;">pd.read_excel() 用于读取xls和xlsx格式文件</span></li> <li><span style="color:#fe2c24;">pd.read_json() 用于读取json格式文件</span></li> <li><span style="color:#fe2c24;">pd.read_table() 用于读取txt格式文件</span></li> </ul> <h2><span style="color:#fe2c24;"><strong>CSV文件读取</strong></span></h2> <pre><code>import pandas as pd  df = pd.read_csv("D:/pandas/TOP250.xlsx")#某csv文件</code></pre> <p>首先，调用pandas模块，通过.read_csv()括号内加文件路径读取文件，展示部分结果图，如下：</p> <p><img fetchpriority="high" decoding="async" alt="" height="497" src="http://img.555519.xyz/uploads/20221229/e1a9630ec7d2988edc04c41fcc44816e.jpg"></p> <p>&nbsp;有时，我们并不会读取所有列或所有行，而是有条件的筛选。这时，我们可以在读取时通过增加代码进行筛选。</p> <h3><strong><span style="color:#fe2c24;">一：指定行列</span></strong></h3> <p><span style="color:#fe2c24;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>norws=n 表示读取前n行</strong></span></p> <pre><code>df = pd.read_csv("D:/pandas/TOP250.xlsx",nrows=5)</code></pre> <p>上述代码表示读取csv文件的前5行，得到的结果如下图：</p> <p><img decoding="async" alt="" height="398" src="http://img.555519.xyz/uploads/20221229/a2bcbe4abc66e664489cd3a14426c4f2.jpg"></p> <p><strong><span style="color:#fe2c24;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;skiprows = n,n可以是数值也可以是列表，表示跳过某些行</span></strong></p> <pre><code>df = pd.read_csv("D:/pandas/TOP250.xlsx",skiprows=3) #表示跳过第三行，读取除了第三行以外的行  df = pd.read_csv("D:/pandas/TOP250.xlsx",skiprows=[i for i in range(1,11)]) #表示跳过前10行  df = pd.read_csv("D:/pandas/TOP250.xlsx",skiprows=lambda x: x % 2) #表示跳过偶数行，读取奇数行</code></pre> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fe2c24;">&nbsp;&nbsp;<strong>usecols = n,n可以是数值、列表，列表中可以是数值也可以是字段名，表示想要读取的列</strong></span></p> <pre><code>df = pd.read_csv("D:/pandas/TOP250.xlsx",usecols=[0,2,4]) #上述代码表示读取第一、第三和第五列  #假设第一、第三、第五列的列表名分别为： a,b,c。那么也可以如下代码表达： df = pd.read_csv("D:/pandas/TOP250.xlsx",usecols=['a','b','c'])</code></pre> <p><span style="color:#fe2c24;">&nbsp;&nbsp;&nbsp;<strong>index_col = n,可以是数值、列表，列表中可以是数值也可以是字段名，表示将n中字段设置为索引列</strong></span></p> <pre><code>df = pd.read_csv("D:/pandas/TOP250.xlsx",index_col=0) #将第一列作为索引列  df = pd.read_csv("D:/pandas/TOP250.xlsx",index_col='a') #若第一列列名为a，也可以表达为上述代码</code></pre> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="color:#fe2c24;">dtype = {'a':'b',":"},dtype表示字段格式，其中a表示字段名，b表示字段类型</span></strong></p> <pre><code>df = pd.read_csv("D:/pandas/TOP250.xlsx",dtype={'test1':'str','test2':'int'}) #将test1列设置成字符串格式，将test2列设置成int格式</code></pre> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fe2c24;"><strong>parse_data = ['','',...],parse_data表示将字段转化成日期格式</strong></span></p> <pre><code>df = pd.read_csv("D:/pandas/TOP250.xlsx",parse_dates=['date_1']) #表示将date_1的格式转化成日期格式 print(df.dtypes) #结果中有：date_1     datetime64[ns] #说明date_1是日期格式</code></pre> <h2><strong><span style="color:#fe2c24;">二.读取指定文件夹下的文件</span></strong></h2> <p>例如：<span style="color:#fe2c24;">在我的test文件夹中有n个相同类型的xlsx文件，我想将其合并，有如下两种方法</span></p> <p><span style="color:#fe2c24;">方法一：</span></p> <pre><code>import pandas as pd import os  path = 'D:/pandas/test/'  #path文件夹具体位置,文件夹下有你所需的多个xlsx文件  filenames = os.listdir(path) #filename为path下所有的文件的文件名，以列表形式输出  filenames = [i for i in filenames if i.lower().endswith('.xlsx)] #这行代码是为了得到以.xlsx为结尾的文件名，并形成列表  lis = []#创建一个新列表，用于放数据  for i in filenames:     lis.append(pd.read_excel(path + filename)) #遍历文件，通过pd.read_excel读取xlsx文件并通过append合并  df1 = pd.concat(lis) #将列表lis合并生成一个文件  df1.to_excel(存放地址,index=False) #保存文件 </code></pre> <p><span style="color:#fe2c24;">方法二：</span></p> <pre><code>import glob import pandas as pd import os  paths = glob.glob("D:/pandas/test/*.xlsx") #表示读取test文件下所有的.xlsx文件，生成列表  data1 = pd.DataFrame() #创建一个新的DataFrame框架  for path in paths:     data = pd.read_excel(path)     data1 = pd.concat([data1,data]) #遍历文件读取并合并，放入data1中，生成一个新的合并后的文件  df.to_excel(存放地址,index=False)</code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-89310.htm">怎么给猫&#25171;&#38024;打在哪里（怎样给猫&#25171;&#38024;需要扎入多深）</a></p>
+                                        <p>下一个：<a href="/news/article-90055.htm">聊城宠物店买的宠物哪家好一点呀（聊城市宠物店位置）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-10-free-node-subscribe.htm" title="安卓VPN | 3月10日21.3M/S|免费V2ray/Clash/Shadowrocket/SSR免费节点订阅分享">安卓VPN | 3月10日21.3M/S|免费V2ray/Clash/Shadowrocket/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-77289.htm" title="动物接种途径有哪些方法（动物接种视频教程）">动物接种途径有哪些方法（动物接种视频教程）</a></li>
+                        <li class="py-2"><a href="/news/article-67374.htm" title="开宠物店需要注意的问题（开宠物店需要注意的问题）">开宠物店需要注意的问题（开宠物店需要注意的问题）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-22-free-subscribe-node.htm" title="安卓VPN | 3月22日22.1M/S|免费Shadowrocket/Clash/V2ray/SSR免费节点订阅分享">安卓VPN | 3月22日22.1M/S|免费Shadowrocket/Clash/V2ray/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-76616.htm" title="老人说猫不能捡为什么（流浪猫来预示着家里要死人了）">老人说猫不能捡为什么（流浪猫来预示着家里要死人了）</a></li>
+                        <li class="py-2"><a href="/news/article-74575.htm" title="中国宠物粮食品牌排行榜（国内宠物粮食品牌）">中国宠物粮食品牌排行榜（国内宠物粮食品牌）</a></li>
+                        <li class="py-2"><a href="/news/article-87133.htm" title="动物注射疫苗的流程图 动物注射疫苗的流程图片">动物注射疫苗的流程图 动物注射疫苗的流程图片</a></li>
+                        <li class="py-2"><a href="/news/article-85700.htm" title="vue3-setup中使用mapState">vue3-setup中使用mapState</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-2-free-subscribe-node.htm" title="安卓VPN | 3月2日21.4M/S|免费Shadowrocket/SSR/V2ray/Clash免费节点订阅分享">安卓VPN | 3月2日21.4M/S|免费Shadowrocket/SSR/V2ray/Clash免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-75260.htm" title="58同城宠物猫领养 58同城宠物猫领养可靠吗">58同城宠物猫领养 58同城宠物猫领养可靠吗</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+                <!-- footer area start -->
+        <footer id="apork-footer-area" class="apork-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer-copyright text-center py-5">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">安卓VPN 订阅机场节点中文网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        <!-- scrolltop button -->
+        <div class="material-scrolltop"></div>
+        <!-- js here -->
+        <script src="/assets/website/js/frontend/vergegithub/modernizr-3.5.0.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/jquery-1.12.4.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/counterup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/scrolltop.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/plugins.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- main area end -->
+</body>
+
+</html>
