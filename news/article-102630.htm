@@ -1,0 +1,240 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnofandroid.github.io/news/article-102630.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vue刷新当前页面几种方式</title>
+        <meta name="description" content="问题  最近些日子项目中突然碰到了一个需求，再完成编辑操作之后需要进行页面刷新，通过实验有如下几种姿势可以解决需求中的问题，下面进行简单总结如下。  姿势一：this.$router.go(0)  这" />
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="安卓VPN 订阅机场节点中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnofandroid.github.io/news/article-102630.htm" />
+    <meta property="og:site_name" content="安卓VPN 订阅机场节点中文网" />
+    <meta property="og:title" content="Vue刷新当前页面几种方式" />
+    <meta property="og:image" content="https://vpnofandroid.github.io/uploads/20241103/66d5817c42e6a6a74021b73ed7bbe371.webp" />
+        <meta property="og:release_date" content="2025-04-23T08:44:36" />
+    <meta property="og:updated_time" content="2025-04-23T08:44:36" />
+        <meta property="og:description" content="问题  最近些日子项目中突然碰到了一个需求，再完成编辑操作之后需要进行页面刷新，通过实验有如下几种姿势可以解决需求中的问题，下面进行简单总结如下。  姿势一：this.$router.go(0)  这" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Vue刷新当前页面几种方式">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- css here -->
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/meanmenu.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/scrolltop.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YLRBZ1KCHT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YLRBZ1KCHT');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- preloaders start -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- preloaders end -->
+    <!-- header area start -->
+    <header>
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="/">
+                                                                <span>安卓VPN</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <!-- main menu area start -->
+                    <div class="col-md-8">
+                        <div class="main-menu-area float-right">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <!-- main menu area end -->
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+    </header>
+    <!-- header area end -->
+    <!-- main area start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div id="apork-breadcrumb-area" class="apork-breadcrumb-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Vue刷新当前页面几种方式</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+        <!-- about area start -->
+        <div class="apork-about-area mt-230 mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail">
+                      				  				  				<div id="content_views" class="htmledit_views"> <p>问题</p> <blockquote> <p>最近些日子项目中突然碰到了一个需求，再完成编辑操作之后需要进行页面刷新，通过实验有如下几种姿势可以解决需求中的问题，下面进行简单总结如下。</p> </blockquote> <p>姿势一：<code>this.$router.go(0)</code></p> <blockquote> <p>这个姿势是利用了 history 中前进和后退的功能，传入 0 刷新当前页面。但是有一个问题就是页面整个刷新过程中会白屏，严重影响用户的体验感，效果不好。</p> <pre><code>this.$router.go(0) </code></pre> </blockquote> <p>姿势二：<code>location.reload()</code></p> <blockquote> <p>这个姿势是利用了直接使用刷新当前页面的方法。但是同样存在有一个问题就是页面整个刷新过程中会白屏，严重影响用户的体验感，效果也是不好，和姿势一的现象一直，也不推荐使用。</p> <pre><code class="language-javascript">location.reload() </code></pre> </blockquote> <p>姿势三：<code>provide / inject组合</code></p> <blockquote> <p>允许一个祖先组件向其所有子孙后代注入一个依赖，不论组件层次有多深，并在起上下游关系成立的时间里始终生效。<br /><code>provide：</code>选项应该是一个对象或返回一个对象的函数。该对象包含可注入其子孙的属性。<br /><code>inject：</code>一个字符串数组，或一个对象，对象的 key 是本地的绑定名。<br /> 注意：provide和inject绑定并不是可响应的。这是刻意为之的。如果你传入了一个可监听的对象，那么其对象的属性还是可响应的。<br /> 基本使用步骤如下：</p> <ul> <li>步骤一：（App.vue）<br /> 通过 $nextTick()，协助实现。先把 &lt;router-view /&gt; 移除，移除后再重新添加，达到刷新当前页面的功能。是目前最合适的实现方式。</li> </ul> <pre><code class="language-html">&lt;template&gt;  &lt;div id="app"&gt;    &lt;router-view v-if="isRouterAlive"/&gt;  &lt;/div&gt; &lt;/template&gt;  &lt;script&gt; export default {  name: 'App',  provide () {    return{      reload: this.reload    }  },  data() {    return {        isRouterAlive: true    }  },  methods:{    reload(){      this.isRouterAlive = false      this.$nextTick(function(){        this.isRouterAlive = true      })    }  } } &lt;/script&gt; </code></pre> <ul> <li>步骤二：（chapter.vue）</li> </ul> <pre><code class="language-javascript">inject: ['reload'], </code></pre> <p style="text-align:center;"><img decoding="async" alt="" src="http://img.555519.xyz/uploads/20221207/9e04569a7a40d74dee684995a7928153.jpg"></p> <p>代码结构</p> <ul> <li>步骤三：（chapter.vue）<br /> 直接this.reload()调用，即可刷新当前页面。</li> </ul> <pre><code>this.reload()// 需要刷新页面 </code></pre> <p style="text-align:center;"><img decoding="async" alt="" src="http://img.555519.xyz/uploads/20221207/ae1e36da94ff82f940849d40ec73d5f9.jpg"></p> <p>代码结构</p> </blockquote> <p> &nbsp;</p> </p></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-101851.htm">动物防疫疫苗管理工作内容（动物防疫计划）</a></p>
+                                        <p>下一个：<a href="/news/article-102631.htm">mysql索引失效的常见9种原因详解</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-4-12-clash-v2ray-ss-ssr.htm" title="安卓VPN | 4月12日18.7M/S|免费Shadowrocket/Clash/SSR/V2ray免费节点订阅分享">安卓VPN | 4月12日18.7M/S|免费Shadowrocket/Clash/SSR/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-69941.htm" title="饲料颗粒机电机型号（饲料颗粒机配备电机）">饲料颗粒机电机型号（饲料颗粒机配备电机）</a></li>
+                        <li class="py-2"><a href="/news/article-96017.htm" title="上海良心宠物医院（上海网红宠物医院）">上海良心宠物医院（上海网红宠物医院）</a></li>
+                        <li class="py-2"><a href="/news/article-71248.htm" title="适合穷人养的猫粮品牌（穷人买什么猫粮好）">适合穷人养的猫粮品牌（穷人买什么猫粮好）</a></li>
+                        <li class="py-2"><a href="/news/article-96015.htm" title="宠物领养日活动方案（宠物领养日活动方案及流程）">宠物领养日活动方案（宠物领养日活动方案及流程）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-15-free-v2ray-subscribe.htm" title="安卓VPN | 3月15日22.7M/S|免费V2ray/Clash/Shadowrocket/SSR免费节点订阅分享">安卓VPN | 3月15日22.7M/S|免费V2ray/Clash/Shadowrocket/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-67374.htm" title="开宠物店需要注意的问题（开宠物店需要注意的问题）">开宠物店需要注意的问题（开宠物店需要注意的问题）</a></li>
+                        <li class="py-2"><a href="/news/article-73899.htm" title="Java程序可以计算数字阶乘中的尾随零">Java程序可以计算数字阶乘中的尾随零</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-14-node-share.htm" title="安卓VPN | 4月14日19.6M/S|免费Clash/Shadowrocket/V2ray/SSR免费节点订阅分享">安卓VPN | 4月14日19.6M/S|免费Clash/Shadowrocket/V2ray/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-79341.htm" title="Envoy熔断限流实践基于Rainbond插件实现熔断">Envoy熔断限流实践基于Rainbond插件实现熔断</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">69</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+                <!-- footer area start -->
+        <footer id="apork-footer-area" class="apork-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer-copyright text-center py-5">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">安卓VPN 订阅机场节点中文网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        <!-- scrolltop button -->
+        <div class="material-scrolltop"></div>
+        <!-- js here -->
+        <script src="/assets/website/js/frontend/vergegithub/modernizr-3.5.0.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/jquery-1.12.4.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/counterup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/scrolltop.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/plugins.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- main area end -->
+</body>
+
+</html>
